@@ -139,17 +139,17 @@ VALUES(9, '11:30-12:00');
 INSERT INTO siase.hora(ID, DESCRIPCION)
 VALUES(10, '12:30-13:00');
 
-INSERT INTO siase.profesores(ID, NOMBRE, ID_ESTATUS)
+INSERT INTO siase.profesor(ID, NOMBRE, ID_ESTATUS)
 VALUES(1, 'Anastacio Hernández',1);
-INSERT INTO siase.profesores(ID, NOMBRE, ID_ESTATUS)
+INSERT INTO siase.profesor(ID, NOMBRE, ID_ESTATUS)
 VALUES(2, 'Osvaldo Habib',1);
-INSERT INTO siase.profesores(ID, NOMBRE, ID_ESTATUS)
+INSERT INTO siase.profesor(ID, NOMBRE, ID_ESTATUS)
 VALUES(3, 'Diana R.',1);
-INSERT INTO siase.profesores(ID, NOMBRE, ID_ESTATUS)
+INSERT INTO siase.profesor(ID, NOMBRE, ID_ESTATUS)
 VALUES(4, 'Dolores Pérez',1);
-INSERT INTO siase.profesores(ID, NOMBRE, ID_ESTATUS)
+INSERT INTO siase.profesor(ID, NOMBRE, ID_ESTATUS)
 VALUES(5, 'Maria Elena',1);
-INSERT INTO siase.profesores(ID, NOMBRE, ID_ESTATUS)
+INSERT INTO siase.profesor(ID, NOMBRE, ID_ESTATUS)
 VALUES(6, 'Pablo Torres',1);
 
 INSERT INTO siase.horario(ID, ID_HORA, ID_AULA, ID_DIA, ID_PROFESOR)
@@ -185,21 +185,21 @@ VALUES (1, 1, 1);
 INSERT INTO siase.materias_horario(ID, ID_MATERIA, ID_HORARIO, ID_ALUMNO, ID_ESTATUS)
 VALUES(1, 1, 1, 1, 1);
 INSERT INTO siase.materias_horario(ID, ID_MATERIA, ID_HORARIO, ID_ALUMNO, ID_ESTATUS)
-VALUES(1, 1, 2, 1, 1);
+VALUES(2, 1, 2, 1, 1);
 INSERT INTO siase.materias_horario(ID, ID_MATERIA, ID_HORARIO, ID_ALUMNO, ID_ESTATUS)
-VALUES(1, 1, 3, 1, 1);
+VALUES(3, 1, 3, 1, 1);
 
-INSERT INTO siase.materia_carrera(ID, ID_CARRERA_PLAN, ID_MATERIA)
+INSERT INTO siase.materia_carrera(ID, ID_MATERIAS, ID_CARRERA_PLAN_ESTUDIO)
 VALUES(1, 1, 1);
-
-INSERT INTO siase.calificaciones_kardex(ID, ID_OPORTUNIDAD, ID_MATERIA_CARRERA, CALIFICACION, id_kardex)
-VALUES(1, 1, 1, 1, 100, 1);
 
 INSERT INTO siase.kardex(ID, FECHA_INICIO, FECHA_FIN, ID_CARRERA)
 VALUES(1, '25-02-17', '25-02-19', 1);
 
-INSERT INTO siase.detalle_alumno(ID, ID_KARDEX, ID_ESTATUS, ID_CARRERA, ID_ALUMNO)
-VALUES(1, 1, 1, 1, 1);
+INSERT INTO siase.calificaciones_kardex(ID, ID_OPORTUNIDAD, ID_MATERIA_CARRERA, CALIFICACION, id_kardex)
+VALUES(1, 1, 1, 100, 1);
 
-INSERT INTO siase.materias_horario_alumno(ID, ID_MATERIA_HORARIO, ID_ALUMNO)
+INSERT INTO siase.detalle_alumno(ID, ID_KARDEX, ID_ESTATUS, ID_ALUMNO)
+VALUES(1, 1, 1, 1);
+
+INSERT INTO siase.materias_horario_alumno(ID, ID_MATERIAS_HORARIO, ID_ALUMNO)
 VALUES(1, 1, 1);
